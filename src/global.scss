@@ -1,0 +1,62 @@
+body
+{
+ background-color: rgb(20, 20, 20);
+ font-family: 'Roboto';
+ color: white;
+ margin: 0;
+ padding: 0;
+}
+::-webkit-scrollbar
+{
+  background-color: transparent;
+  width: 9px;
+  max-height: 5px;
+}
+  ::-webkit-scrollbar-thumb
+ {
+   background-color: rgb(5, 207, 96);
+   border-radius: 10px;
+ }
+
+.button
+{
+ height:50px ;
+ border: none;
+ border:1px solid rgb(5, 207, 96);
+ border-radius: 55px;
+font-size:1.0em ;
+font-weight: 700;
+font-style: italic;
+ width: 180px;
+ color: white;
+ background-color: rgb(5, 207, 96);
+}
+
+.overeffect
+{
+  
+   background-color:rgb(5, 207, 96); 
+   //filter:contrast(0.5);
+   
+   img
+   {
+    filter: grayscale(90%);
+   }
+}
+
+.inputglobalText
+{
+ border:1px solid  #452b84;
+ border-radius: 15px;
+ height: 4.5vh;
+ width: 40vh;
+ color:rgb(163, 163, 163);
+ padding-left: 2vh;
+ background-color: transparent;
+
+}
+.inputglobalText :hover
+{
+ box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+ }
+

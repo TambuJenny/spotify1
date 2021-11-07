@@ -1,0 +1,86 @@
+
+.productDescrition
+{
+ background-color: #452b84;
+ height: 50vh;
+ width: 15%;
+ border: 1px solid #452b84;
+ border-radius: 5px;
+ padding: 0 25px;
+ .title
+ {
+  margin-bottom: 2%;
+   p
+   {
+    font-size: 1.2em;
+    font-weight: 500;
+   }
+ }
+
+ .body
+ {
+  .section_op
+  {
+   .title-options
+   {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    #title
+    {
+     font-size: 0.8em;
+     margin-bottom: 1%; 
+     padding-bottom: 1.0%;
+     width: 50%;
+     font-weight: 700;
+    }
+
+
+   
+    button
+    {
+     background-color: transparent;
+     border: transparent;
+     color: white;
+     font-size: 1.2em;
+     align-items: center;
+    }
+   }
+   .productsAllCard
+   {
+    
+   }
+   .productsAllCard
+   {
+     overflow: hidden;
+    //border: 1px solid white;
+    animation-name: view;
+    animation-duration: 10s;
+    //visibility: hidden;
+   }
+
+   .option
+   {
+    font-size: 0.8em;
+    color: #999999;
+    font-weight: 700;
+    padding-top:10% ;
+   }
+  }
+ }
+
+
+}
+
+//Animation Keyframe
+@keyframes view {
+  
+  to{
+      height: auto;
+  }
+  from{
+        height: 15px;
+  }
+  
+}

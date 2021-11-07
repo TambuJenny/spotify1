@@ -1,0 +1,130 @@
+
+
+html
+{
+ background-color: #321f61;
+ color: white;
+ font-family: 'Roboto';
+ margin-left:5% ;
+ margin-right: 5%;
+ overflow: hidden;
+
+header
+{
+ display:flex;
+ justify-content: space-between;
+ .contente_data
+ {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  #appName
+  {
+   font-size: 1.2em;
+   font-weight: 700;
+  }
+
+  p
+  {
+   font-size: 0.8em;
+   white-space: 0.2;
+  
+  }
+
+ }
+ .contente_search
+ {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input
+  {
+   width: 80%;
+   height:  45%;
+   border: 1px solid #452b84;
+   border-radius: 25px;
+   background-color: #452b84;
+   //box-shadow: 1px 5px 1px  rgba(0, 0, 0, 0.2);
+   
+  }
+ 
+ }
+ .contente_user
+ {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p
+  {
+   font-size: 0.8em;
+  }
+  .img
+  {
+    overflow: hidden;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 180px ;
+    img
+    {
+     max-width: 40px;
+     
+    }
+
+  }
+ }
+}
+}
+body
+{
+ background-color: #321f61;
+.principal
+{
+ display: flex;
+ //justify-content: space-between;
+
+ .products
+ {
+  background-color: #452b84;
+  height: 85vh;
+  width: 55%;
+  border: 1px solid #452b84;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 0px;
+  padding: 15px 15px;
+  overflow-y: scroll;
+  
+
+ }
+ ::-webkit-scrollbar
+ {
+   background-color: transparent;
+   width: 9px;
+   height: 3px;
+ }
+   ::-webkit-scrollbar-thumb
+  {
+    background-color: rgb(5, 207, 96);
+    height: 3px;
+    width: 3px;
+    border-radius: 10px;
+  }
+ .space
+ {
+   width: 1%;
+   height: auto;
+ }
+}
+ 
+
+}
+
+

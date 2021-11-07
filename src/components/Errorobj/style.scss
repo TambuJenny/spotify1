@@ -1,0 +1,36 @@
+.cardError
+{
+ 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ .card
+ {
+  position: static;
+  top:10%;
+  padding: 5px;
+  height: 75%;
+  width: 20%;
+  background-color: #05cf60;
+  border:5px solid #05cf60;
+  border-radius: 5px ;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.425);
+  h2
+  {
+   font-style: italic;
+   font-size: 1.0em;
+   width: 65%;
+   padding-bottom: 2%;
+   border-bottom: 1px solid white;
+  }
+  p
+  {
+   margin: 0;
+   font-size: 0.7em;
+  }
+
+
+ }
+
+}

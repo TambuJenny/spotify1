@@ -1,0 +1,39 @@
+.card_body
+{
+ background-color: #5332a1;
+ height: 180px;
+ width: auto;
+ border: 1px solid #5332a1;
+ border-radius: 7px;
+ overflow: hidden;
+ margin: 8px;
+
+ .card_img
+ {
+  overflow: hidden;
+  height: 75%;
+  
+  img
+  {
+   max-width: 100%;
+  }
+ }
+ .card_description
+ {
+  padding-left: 5px;
+   p
+   {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding: 0;
+    font-size: 0.7em;
+    font-weight: 700;
+   }
+   label
+   {
+    font-size: 0.7em;
+    color:#8e9999;
+   }
+ }
+
+}

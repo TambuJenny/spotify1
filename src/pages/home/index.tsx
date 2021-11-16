@@ -111,7 +111,7 @@ export  function Home ()
     <div className="img_playlist">
     
    <div className="nameplaylisandsearch">
-   <p>Playlist Name: {Name} </p>  
+   <p>Spotify Playlist: {Name} </p>  
    <input type="text" className="inputglobalText" placeholder="Pesquisar" />
    </div>
      { 

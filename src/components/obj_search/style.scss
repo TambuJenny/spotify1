@@ -1,0 +1,53 @@
+.card-search
+{
+ border: 1px solid white;
+ overflow: hidden;
+ border-radius: 10px;
+ padding-top: 3vh;
+ padding-left: 3vh;
+ padding-right: 3vh;
+ height: 75vh;
+ display: flex;
+ .card-img
+ {
+  flex: 30;
+
+  .img-div
+  {
+    height: 50vh;
+    border: 1px solid rgb(97, 97, 97);
+  }
+ }
+ .card-list
+ {
+  flex: 70;
+  .card-title
+  {
+   margin-left: 15vh;
+   margin-right: 5vh;
+   tr
+   {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2vh;
+   }
+   border-bottom: 0.1em solid rgb(97, 97, 97);
+   
+  }
+  .card-conteudo
+  {
+   height: 68vh;
+   margin-left: 15vh;
+   margin-right: 5vh;
+   tr
+   {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8vh;
+   }
+   overflow-y: auto;
+  }
+ }
+}

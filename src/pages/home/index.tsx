@@ -6,6 +6,7 @@ import {api, getToken,callSpotifyAccount} from "../../service";
 import { Link } from "react-router-dom";
 import flameImg from './../../assets/img/imgFlame.png'
 import CardError from './../../components/Errorobj/index'
+import {ObjSearch} from './../../components/obj_search/index'
 
 
  getToken()
@@ -93,6 +94,7 @@ type  getplaylist =
 export  function Home ()
 {   
   const [search_play, setsearch_play] = useState<getplaylist>();
+  const [search,setsearch] = useState ('');
   const [keyValue, setkeyvalue]= useState(0);
   const [state,setstate]=useState(true)     
   const [playlist,setplaylist]=useState<categories>();
@@ -105,7 +107,16 @@ export  function Home ()
           })
 
           
-         
+         function presse ()
+         {
+            var id_element = document.getElementById('search_playlist');
+            id_element?.addEventListener('keyup',((e)=>{
+                //alert(e.preventDefault())
+                console.log(e.key);
+                
+            }))
+         }
+         presse();
           
         
        //console.log(playlist)
@@ -128,16 +139,18 @@ export  function Home ()
         </div>
        
     </div>
+  
+      <ObjSearch></ObjSearch>
    
     <div className="img_playlist">
     
    <div className="nameplaylisandsearch">
    <p>Spotify Playlist: {Name} </p>  
-   <input type="text" className="inputglobalText" placeholder="Colar o ID da PlayList"onChange ={()=>{
+   <input type="text" className="inputglobalText" id="search_playlist"   placeholder="Colar o link da PlayList" onChange={(e)=>{
+   setsearch(e.target.value);
 
-    
-
-   }} />
+   }}/>
+  
    </div>
      { 
         playlist?.items.map(img =>(

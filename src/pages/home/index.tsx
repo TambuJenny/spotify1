@@ -6,7 +6,7 @@ import {api, getToken,callSpotifyAccount} from "../../service";
 import { Link } from "react-router-dom";
 import flameImg from './../../assets/img/imgFlame.png'
 import CardError from './../../components/Errorobj/index'
-import {ObjSearch} from './../../components/obj_search/index'
+import {ObjSearch,playlistdata} from './../../components/obj_search/index'
 
 
  getToken()
@@ -21,31 +21,11 @@ const response_playlist = api.get('/v1/browse/categories?local=sv_US',
    
 }
 )
-type  getplaylist = 
-{
-    id?:String ,
-    href:String,
-    items: [{}],
-    limit: Int16Array,
-    total: Int16Array
 
-}
 
- const search_playlist= (id_playlist:getplaylist)=>{
+ const search_playlist= ()=>{
 
-  api.get(`/v1/playlists/${id_playlist.id}/tracks`,
-  {
-    headers:{
-      "Accept": "application/json",
-      "Content-Type": "application/json",
-      "Authorization":`Bearer ${token}`
-    }
-  }).then((data)=>{
-        return data.data
-  }).catch((e)=>{
-    console.log('erro',e);
-    
-  })
+  
 
 }
     
@@ -93,7 +73,7 @@ type  getplaylist =
 
 export  function Home ()
 {   
-  const [search_play, setsearch_play] = useState<getplaylist>();
+  const [search_play, setsearch_play] = useState();
   const [search,setsearch] = useState ('');
   const [keyValue, setkeyvalue]= useState(0);
   const [state,setstate]=useState(true)     
@@ -140,7 +120,7 @@ export  function Home ()
        
     </div>
   
-      <ObjSearch></ObjSearch>
+     {/*<ObjSearch  ></ObjSearch>*/ } 
    
     <div className="img_playlist">
     
@@ -148,6 +128,20 @@ export  function Home ()
    <p>Spotify Playlist: {Name} </p>  
    <input type="text" className="inputglobalText" id="search_playlist"   placeholder="Colar o link da PlayList" onChange={(e)=>{
    setsearch(e.target.value);
+
+   api.get(`/v1/playlists/${search_play}/tracks`,
+  {
+    headers:{
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "Authorization":`Bearer ${token}`
+    }
+  }).then((data)=>{
+        return data.data
+  }).catch((e)=>{
+    console.log('erro',e);
+    
+  })
 
    }}/>
   

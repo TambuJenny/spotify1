@@ -8,7 +8,6 @@ export default function  CardError()
      <div className="cardError">
       <div className="card">
        <h2>Spotify Erro</h2>
-       
        <p>Erro de Conexão, verifica a sua conexão</p>
       </div>
        </div>

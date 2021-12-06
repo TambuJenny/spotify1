@@ -59,10 +59,6 @@ const response_playlist = api.get('/v1/browse/categories?local=sv_US',
               {
                 getbutton?.classList.add('overeffect')  
               }
-              
-               
-             
-
               getbutton?.addEventListener("click",(e)=>{
                    
               })

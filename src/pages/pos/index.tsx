@@ -21,12 +21,6 @@ function getUrlCode()
 }
 var codeUser = getUrlCode();
 
-
-
-
-
-
-
 export function Pos (){
 
   function verifique()

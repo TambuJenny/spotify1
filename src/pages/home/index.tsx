@@ -20,11 +20,36 @@ const response_playlist = api.get('/v1/browse/categories?local=sv_US',
    
 }
 )
+type  getplaylist = 
+{
+    id?:String ,
+    href:String,
+    items: [{}],
+    limit: Int16Array,
+    total: Int16Array
+
+}
+
+ const search_playlist= (id_playlist:getplaylist)=>{
+
+  api.get(`/v1/playlists/${id_playlist.id}/tracks`,
+  {
+    headers:{
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "Authorization":`Bearer ${token}`
+    }
+  }).then((data)=>{
+        return data.data
+  }).catch((e)=>{
+    console.log('erro',e);
+    
+  })
+
+}
     
 
     type categories={
-     
-         
                 items:[
                 {
                  href?:string,
@@ -34,9 +59,7 @@ const response_playlist = api.get('/v1/browse/categories?local=sv_US',
                         height?:number,
                         url?:string,
                         width?:number
-                      
                  }]
-
                 }]
           }
         
@@ -69,7 +92,7 @@ const response_playlist = api.get('/v1/browse/categories?local=sv_US',
 
 export  function Home ()
 {   
-  
+  const [search_play, setsearch_play] = useState<getplaylist>();
   const [keyValue, setkeyvalue]= useState(0);
   const [state,setstate]=useState(true)     
   const [playlist,setplaylist]=useState<categories>();
@@ -80,6 +103,8 @@ export  function Home ()
           }).catch(function(response){
                     setstate(false)
           })
+
+          
          
           
         
@@ -108,7 +133,11 @@ export  function Home ()
     
    <div className="nameplaylisandsearch">
    <p>Spotify Playlist: {Name} </p>  
-   <input type="text" className="inputglobalText" placeholder="Pesquisar" />
+   <input type="text" className="inputglobalText" placeholder="Colar o ID da PlayList"onChange ={()=>{
+
+    
+
+   }} />
    </div>
      { 
         playlist?.items.map(img =>(
